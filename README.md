@@ -19,5 +19,6 @@ You need to make changes to `/etc/hosts` add a entry `192.168.1.101 hsecure.loca
 To enable https in firefox localy in your rpi you need to generate the .pkcs12 of your certificate using openssl and import the certificate in Firefox settings.
 
 
-5) Voila you have a running home security system with rpi
+5) Voila! you have a running home security system with rpi\
+Now whenever a person gets detected, you can get notifications on your phone in Pushbullet app once you provide the api key
 
