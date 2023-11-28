@@ -1,0 +1,13 @@
+Description=Start stop Firefox
+After=syslog.target network.target hsecure.service
+
+[Service]
+Environment="DISPLAY=:99"
+User=subrata32
+ExecStartPre=/usr/bin/Xvfb :99 -screen 0 1280x1024x24
+ExecStart=/usr/bin/firefox https://hsecure.local &
+ExecStop=pkill -f firefox
+Restart=on-success
+
+[Install]
+WantedBy=graphical.target

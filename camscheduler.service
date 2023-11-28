@@ -1,0 +1,12 @@
+Description=Camscheduler script to run firefox in virtual x11
+After=syslog.target network.target hsecure.service xvfp.service
+
+[Service]
+Environment="DISPLAY=:99"
+User=subrata32
+ExecStart=/usr/bin/python /home/subrata32/camscheduler.py
+Restart=always
+RestartSec=600
+
+[Install]
+WantedBy=multi-user.target
